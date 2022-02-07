@@ -113,6 +113,11 @@ img {
   vertical-align: top;
 }
 
+svg {
+  max-width: 100%;
+  vertical-align: top;
+}
+
 /*
     Elements: typography
     ---
