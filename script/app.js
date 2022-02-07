@@ -88,15 +88,15 @@ function currentSlide(index) {
 
 // Open the Modal
 function openModal() {
-    //document.getElementByClassName("c-modal").style.display = "block";
     document.querySelector('.c-modal').style.display = "block";
+    document.querySelector('.c-body').style.overflow = "hidden";
     scrollToTop();
 }
   
 // Close the Modal
 function closeModal() {
-    //document.getElementByClassName("c-modal").style.display = "none";
     document.querySelector('.c-modal').style.display = "none";
+    document.querySelector('.c-body').style.overflow = "visible";
 }
   
 var slideIndexGallery = 1;
@@ -130,13 +130,13 @@ function showSlidesGallery(n) {
     captionText.innerHTML = dots[slideIndexGallery-1].alt;
 }
 
-/* -------- scroll to top ------- */
+/* -------- SCROLL TO TOP ------- */
 function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
-/* -------- focus dropdown --------- */
+/* -------- FOCUS DROPDOWN --------- */
 
 function showDropdownOnderhoud() {
     console.log('focus');
@@ -151,22 +151,4 @@ function showDropdownAanleg() {
 function hideDropdowns() {
     document.getElementById("onderhoud-dropdown").style.display = "none";
     document.getElementById("aanleg-dropdown").style.display = "none";
-}
-
-
-/* ------- collapsible --------- */
-
-var coll = document.getElementsByClassName("c-collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("c-collapsible-active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
 }
