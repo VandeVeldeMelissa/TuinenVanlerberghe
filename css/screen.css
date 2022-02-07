@@ -1116,7 +1116,8 @@ footer {
 .c-card {
   background-color: rgb(235, 235, 235);
   padding: 16px;
-  margin: auto 8px auto 8px;
+  margin: auto;
+  border: solid 8px white;
 }
 
 /* ------ */
