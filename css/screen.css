@@ -61,12 +61,6 @@ html {
   background-attachment: fixed;
 }
 
-@media (min-width: 700px) {
-  html {
-    font-size: 18px;
-  }
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -116,6 +110,7 @@ img {
 svg {
   max-width: 100%;
   vertical-align: top;
+  max-height: 120px;
 }
 
 /*
