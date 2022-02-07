@@ -795,7 +795,7 @@ footer {
   margin-top: 16px;
   font-size: 18px;
   line-height: 24px;
-  font-family: inherit;
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
 }
 
 .c-button--thankyou:hover {
@@ -1116,7 +1116,7 @@ footer {
 .c-card {
   background-color: rgb(235, 235, 235);
   padding: 16px;
-  margin: auto;
+  margin: auto 8px auto 8px;
 }
 
 /* ------ */
