@@ -89,14 +89,14 @@ function currentSlide(index) {
 // Open the Modal
 function openModal() {
     document.querySelector('.c-modal').style.display = "block";
-    // document.querySelector('.c-body').style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     scrollToTop();
 }
   
 // Close the Modal
 function closeModal() {
     document.querySelector('.c-modal').style.display = "none";
-    // document.querySelector('.c-body').style.overflow = "visible";
+    document.body.style.overflow = "visible";
 }
   
 var slideIndexGallery = 1;
