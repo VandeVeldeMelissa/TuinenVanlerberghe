@@ -536,11 +536,14 @@ footer {
   max-width: 100%;
   vertical-align: top;
   height: auto;
+  display: inline-block;
 }
 
-.c-logo__symbol {
-  height: 100%;
+.c-logo__link {
+  text-decoration:none;
+  height: max-content;
 }
+
 
 /*
     Component: header
@@ -1153,6 +1156,10 @@ footer {
 
 .u-pt-clear {
   padding-top: 0 !important;
+}
+
+.u-pt-md {
+  padding-top: 16px !important;
 }
 
 .u-mb-clear {
