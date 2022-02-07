@@ -88,7 +88,7 @@ function currentSlide(index) {
 
 // Open the Modal
 function openModal() {
-    document.querySelector('.c-modal').style.display = "block";
+    document.querySelector('.c-modal').style.display = "flex";
     document.body.style.overflow = "hidden";
     scrollToTop();
 }
@@ -115,19 +115,12 @@ function currentSlideGallery(n) {
 function showSlidesGallery(n) {
     var i;
     var slides = document.getElementsByClassName("c-slides-gallery");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndexGallery = 1}
     if (n < 1) {slideIndexGallery = slides.length}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
     slides[slideIndexGallery-1].style.display = "block";
-    dots[slideIndexGallery-1].className += " active";
-    captionText.innerHTML = dots[slideIndexGallery-1].alt;
 }
 
 /* -------- SCROLL TO TOP ------- */
