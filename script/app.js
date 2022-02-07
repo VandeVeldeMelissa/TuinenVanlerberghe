@@ -16,8 +16,6 @@ function toggleNav() {
     }
 }
 
-function openMobileNav()
-
 function toggleMobileNav() {
     document.querySelector("body").classList.toggle("has-mobile-nav");
 }
