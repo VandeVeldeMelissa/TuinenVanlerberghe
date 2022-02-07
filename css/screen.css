@@ -73,6 +73,10 @@ body {
   flex-direction: column;
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 *,
 *:before,
 *:after {
@@ -1118,31 +1122,6 @@ footer {
   padding: 16px;
   margin: auto;
   border: solid 8px white;
-}
-
-/* ------ */
-/* Style the button that is used to open and close the collapsible content */
-.c-collapsible {
-  color: black;
-  cursor: pointer;
-  border: none;
-  width: 100%;
-  text-align: right;
-  outline: none;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.collapsible-active,
-.c-collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.c-collapsible--content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
 }
 
 /*------------------------------------*\
