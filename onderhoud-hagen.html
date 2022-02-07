@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuinen Vanlerberghe</title>
+    <link rel="icon" href="img/icon/tuinen-vlb-logo.svg">
+    <link rel="apple-touch-icon" href="img/icon/tuinen-vlb-logo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <script src="script/app.js"></script>
+</head>
+<body>
+<div class="c-page">
+        <div class="c-page--main-content">
+            <header class="o-row">
+                        <div class="o-container">
+                            <div class="c-header">
+                                <div class="c-header__logo">
+                                    <a href="index.html"><img src="/img/icon/Tuinen-Vanlerberghe-Logo.svg" alt="Logo Tuinen Vanlerberghe" onfocus="hideDropdowns()"></a>
+                                </div>
+                                <div class="c-header__nav">
+                                    <nav>
+                                        <ul class="o-list c-nav__list u-mb-clear">
+                                            <li class="c-nav__item"><a href="index.html" class="c-nav__link" onfocus="hideDropdowns()">Home</a></li>
+                                            <li class="c-nav__item is-selected">
+                                                <div class="c-dropdown">
+                                                    <a href="onderhoud-van-tuinen.html" class="c-dropdownbtn" onfocus="hideDropdowns();showDropdownOnderhoud()">Onderhoud</a>
+                                                    <div class="c-dropdown--content" id="onderhoud-dropdown">
+                                                        <a href="onderhoud-gazons.html" tabindex="0">Gazons</a>
+                                                        <a href="onderhoud-hagen.html" tabindex="0">Hagen</a>
+                                                        <a href="onderhoud-borders.html" tabindex="0">Borders</a>
+                                                        <a href="onderhoud-snoeien.html" tabindex="0">Snoeien</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="c-nav__item">
+                                                <div class="c-dropdown">
+                                                    <a href="aanleg-van-tuinen.html" class="c-dropdownbtn" onfocus="hideDropdowns();showDropdownAanleg()">Aanleg</a>
+                                                    <div class="c-dropdown--content" id="aanleg-dropdown">
+                                                        <a href="aanleg-aanplanten.html" tabindex="0">Aanplanten</a>
+                                                        <a href="aanleg-terassen-opritten.html" tabindex="0">Terassen en opritten</a>
+                                                        <a href="aanleg-afsluitingen.html" tabindex="0">Afsluitingen</a>
+                                                        <a href="aanleg-verwijdering-beplanting.html" tabindex="0">Verwijdering van beplanting</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="c-nav__item"><a href="verkoop-van-planten.html" class="c-nav__link" onfocus="hideDropdowns()">Verkoop</a></li>
+                                            <li class="c-nav__item"><a href="contacteer-ons.html" class="c-nav__link" onfocus="hideDropdowns()">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="c-header__mobile-nav-trigger">
+                                    <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                                        <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+            <div class="o-row"><div class="o-container-sm"><h2>Hagen</h2></div></div>
+            <section class="o-row u-pt-clear">
+                <div class="o-container-sm">
+                            <p>
+                                Hagen zijn een must in een tuin, ze sluiten het geheel af en geven een structuur en indeling aan uw tuin. Hierdoor krijgt u voldoende afsluiting in uw tuin maar krijgt u niet het harde opgesloten gevoel zoals tussen betonnen muren. Een haag vraagt natuurlijk wel wat onderhoud, wij helpen u graag een handje met de jaarlijkse scheerbeurten. Is de haag na enkele jaren buiten zijn voegen getreden dan kan u ook bij ons terecht voor het restaureren van deze. Ook voor de vormsnoei van hagen kan u bij ons terecht.
+                            </p>
+                            <div class="c-grid-images">
+                                <img class="c-grid-image" src="img/haag/Haag1.jpg" onclick="openModal();currentSlideGallery(1)">
+                                <img class="c-grid-image" src="img/haag/Haag2.jpg" onclick="openModal();currentSlideGallery(2)">
+                                <img class="c-grid-image" src="img/haag/Haag3.jpeg" onclick="openModal();currentSlideGallery(3)">
+                                <img class="c-grid-image" src="img/haag/Haag4.jpg" onclick="openModal();currentSlideGallery(4)">
+                                <img class="c-grid-image" src="img/haag/Haag5.jpg" onclick="openModal();currentSlideGallery(5)">
+                                <img class="c-grid-image" src="img/haag/Haag6.jpg" onclick="openModal();currentSlideGallery(6)">
+                                <img class="c-grid-image" src="img/haag/Scheren1.jpeg" onclick="openModal();currentSlideGallery(7)">
+                                <img class="c-grid-image" src="img/haag/Scheren2.jpeg" onclick="openModal();currentSlideGallery(8)">
+                                <img class="c-grid-image" src="img/haag/Scheren3.jpeg" onclick="openModal();currentSlideGallery(9)">
+                                <img class="c-grid-image" src="img/haag/Scheren4.jpeg" onclick="openModal();currentSlideGallery(10)">
+                            </div>
+            </section>
+        
+            <div class="c-modal">
+                <span class="c-closebtn" onclick="closeModal()">&times;</span>
+                <div class="c-modal-content">
+            
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">1 / 10</div>
+                    <img src="img/haag/Haag1.jpg" class="c-slide--image">
+                </div>
+            
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">2 / 10</div>
+                    <img src="img/haag/Haag2.jpg" class="c-slide--image">
+                </div>
+            
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">3 / 10</div>
+                    <img src="img/haag/Haag3.jpeg" class="c-slide--image">
+                </div>
+            
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">4 / 10</div>
+                    <img src="img/haag/Haag4.jpg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">5 / 10</div>
+                    <img src="img/haag/Haag5.jpg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">6 / 10</div>
+                    <img src="img/haag/Haag6.jpg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">7 / 10</div>
+                    <img src="img/haag/Scheren1.jpeg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">8 / 10</div>
+                    <img src="img/haag/Scheren2.jpeg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">9 / 10</div>
+                    <img src="img/haag/Scheren3.jpeg" class="c-slide--image">
+                </div>
+        
+                <div class="c-slides-gallery">
+                    <div class="c-slide--numbertext">10 / 10</div>
+                    <img src="img/haag/Scheren4.jpeg" class="c-slide--image">
+                </div>
+            
+                <a class="c-slides-gallery--prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
+                <a class="c-slides-gallery--next" onclick="plusSlidesGallery(1)">&#10095;</a>
+            
+                </div>
+            </div>
+        </div>
+            <footer class="o-row">
+                <div class="o-container">
+                    <div>Contactgegevens: Vanlerberghe Aram - <a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                </div>
+            </footer>
+        
+</div>
+<div class="c-mobile-nav">
+    <div class="c-mobile-nav__body">
+        <div class="o-row">
+            <div class="o-container">
+                    <div class="c-mobile-nav__header">
+                        <a href="index.html"><img src="/img/icon/Tuinen-Vanlerberghe-Logo.svg" alt="Logo Tuinen Vanlerberghe"></a>
+                        <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                            <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+            </div>
+        </div>
+        <div class="o-row">
+            <div class="o-container">
+                <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+                    <nav class="c-nav">   
+                        <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a href="index.html" class="c-nav__link--mobile">Home</a></li>
+                            <li class="c-nav__item"><a href="onderhoud-van-tuinen.html" class="c-nav__link--mobile">Onderhoud</a></li>
+                            <ul class="o-list c-nav__sublist">
+                                <li class="c-nav__item"><a href="onderhoud-gazons.html" class="c-nav__link--mobile">Gazons</a></li>
+                                <li class="c-nav__item"><a href="onderhoud-hagen.html" class="c-nav__link--mobile">Hagen</a></li>
+                                <li class="c-nav__item"><a href="onderhoud-borders.html" class="c-nav__link--mobile">Borders</a></li>
+                                <li class="c-nav__item"><a href="onderhoud-snoeien.html" class="c-nav__link--mobile">Snoeien</a></li>
+                            </ul>
+                            <li class="c-nav__item"><a href="aanleg-van-tuinen.html" class="c-nav__link--mobile">Aanleg</a></li>
+                            <ul class="o-list c-nav__sublist">
+                                <li class="c-nav__item"><a href="aanleg-aanplanten.html" class="c-nav__link--mobile">Aanplanten</a></li>
+                                <li class="c-nav__item"><a href="aanleg-terassen-opritten.html" class="c-nav__link--mobile">Terassen en opritten</a></li>
+                                <li class="c-nav__item"><a href="aanleg-afsluitingen.html" class="c-nav__link--mobile">Afsluitingen</a></li>
+                                <li class="c-nav__item"><a href="aanleg-verwijdering-beplanting.html" class="c-nav__link--mobile">Verwijdering van beplanting</a></li>
+                            </ul>
+                            <li class="c-nav__item"><a href="verkoop-van-planten.html" class="c-nav__link--mobile">Verkoop</a></li>
+                            <li class="c-nav__item"><a href="contacteer-ons.html" class="c-nav__link--mobile">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
