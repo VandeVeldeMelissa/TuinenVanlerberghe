@@ -725,7 +725,7 @@ main {
   pointer-events: none;
   overflow-y: auto;
   z-index: 3;
-  height: 100vh;
+  height: cakc(100vh + 70px);
 }
 
 .has-mobile-nav .c-mobile-nav {
