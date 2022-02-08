@@ -769,8 +769,13 @@ footer {
   padding: 0;
 }
 
-.has-mobile-nav .c-page {
+/* .has-mobile-nav .c-page {
   transform: translateX(25%);
+  transition: transform 0.5s ease;
+} */
+
+.has-mobile-nav .c-page {
+  transform: translateX(100%);
   transition: transform 0.5s ease;
 }
 
