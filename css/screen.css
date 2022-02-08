@@ -713,17 +713,6 @@ footer {
     Mobile Nav Component
 */
 
-/* .c-mobile-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  pointer-events: none;
-  overflow-y: auto;
-  z-index: 3;
-  height: 100vh;
-} */
-
 .c-mobile-nav {
   position: fixed;
   top: 0;
@@ -732,9 +721,7 @@ footer {
   pointer-events: none;
   overflow-y: auto;
   z-index: 3;
-  height: calc(100vh + 200px);
-  padding: 100px 0 100px 0;
-  margin: -100px 0 -100px 0;
+  height: 100vh;
 }
 
 .has-mobile-nav .c-mobile-nav {
