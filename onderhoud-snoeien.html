@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/screen.css">
     <script src="script/app.js"></script>
+    <script src="script/cookies.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219710149-1">
 </script>
@@ -30,11 +31,12 @@
 </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHNKJH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-<main id="page">
+    <div id="cookie-popup" class="c-cookie-popup">
+        <svg class="c-cookie-popup--logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        <p class="c-cookie-popup--text">Deze website maakt gebruik van cookies om u een betere browservaring te bieden. Door deze site te blijven gebruiken, stemt u in met het gebruik van cookies. <a href="cookiebeleid-en-privacydisclaimer.html#cookies">Meer lezen</a>.</p>
+        <button id="cookie-accept" class="c-cookie-popup--button">Ok</button>
+    </div>
+    <main id="page">
     <div class="c-page">
         <div class="c-page--main-content">
             <header class="o-row">
@@ -104,11 +106,11 @@
                             Snoeien blijft vaak een moeilijk gegeven aangezien ieder plant, boom, heester andere eisen stelt en er dus heel wat verschillende snoeimethodes zijn. Bovendien mag niet alles eender wanneer gesnoeid worden. Weet u niet hoe hier aan te beginnen, neem gerust contact op. U kan voor al uw snoeiwerkzaamheden in de tuin bij ons terecht: snoeien van rozen, snoeien van heesters allerhande, knotten, vorm en begeleidingssnoei van bomen,… 
                         </p>
                         <div class="c-grid-images">
-                            <img class="c-grid-image" src="img/snoeien/Knotten1.jpg" onclick="openModal();currentSlideGallery(1)">
-                            <img class="c-grid-image" src="img/snoeien/Knotten2.jpg" onclick="openModal();currentSlideGallery(2)">
-                            <img class="c-grid-image" src="img/snoeien/Knotten3.jpg" onclick="openModal();currentSlideGallery(3)">
-                            <img class="c-grid-image" src="img/snoeien/Omgezaagd1.jpg" onclick="openModal();currentSlideGallery(4)">
-                            <img class="c-grid-image" src="img/snoeien/Hakseling1.jpg" onclick="openModal();currentSlideGallery(5)">
+                            <img class="c-grid-image" src="img/snoeien/Knotten1.jpg" alt="Tuinman in een boom op te knotten" onclick="openModal();currentSlideGallery(1)">
+                            <img class="c-grid-image" src="img/snoeien/Knotten2.jpg" alt="Resultaat van het knotten van een boom" onclick="openModal();currentSlideGallery(2)">
+                            <img class="c-grid-image" src="img/snoeien/Knotten3.jpg" alt="Halfweg klaar met het knotten van een boom" onclick="openModal();currentSlideGallery(3)">
+                            <img class="c-grid-image" src="img/snoeien/Omgezaagd1.jpg" alt="Omgezaagde boom" onclick="openModal();currentSlideGallery(4)">
+                            <img class="c-grid-image" src="img/snoeien/Hakseling1.jpg" alt="Remorque vol hakseling" onclick="openModal();currentSlideGallery(5)">
                         </div>
                     </div>
                 </section>
@@ -119,27 +121,27 @@
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">1 / 5</div>
-                        <img src="img/snoeien/Knotten1.jpg" class="c-slide--image">
+                        <img src="img/snoeien/Knotten1.jpg" alt="Tuinman in een boom op te knotten" class="c-slide--image">
                     </div>
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">2 / 5</div>
-                        <img src="img/snoeien/Knotten2.jpg" class="c-slide--image">
+                        <img src="img/snoeien/Knotten2.jpg" alt="Resultaat van het knotten van een boom" class="c-slide--image">
                     </div>
     
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">3 / 5</div>
-                        <img src="img/snoeien/Knotten3.jpg" class="c-slide--image">
+                        <img src="img/snoeien/Knotten3.jpg" alt="Halfweg klaar met het knotten van een boom" class="c-slide--image">
                     </div>
     
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">4 / 5</div>
-                        <img src="img/snoeien/Omgezaagd1.jpg" class="c-slide--image">
+                        <img src="img/snoeien/Omgezaagd1.jpg" alt="Omgezaagde boom" class="c-slide--image">
                     </div>
     
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">5 / 5</div>
-                        <img src="img/snoeien/Hakseling1.jpg" class="c-slide--image">
+                        <img src="img/snoeien/Hakseling1.jpg" alt="Remorque vol hakseling" class="c-slide--image">
                     </div>
     
                     <a class="c-slides-gallery--prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
@@ -149,6 +151,10 @@
                 <footer class="o-row">
                     <div class="o-container">
                         <div><a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                        <div class="u-color-darkgray u-pt-xs">
+                            © 2023 Tuinen Vanlerberghe -
+                            <a href="cookiebeleid-en-privacydisclaimer.html" class="c-secondary-link u-color-darkgray">Cookiebeleid & privacy disclaimer</a>
+                        </div>
                     </div>
                 </footer>
         

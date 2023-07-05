@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/screen.css">
     <script src="script/app.js"></script>
+    <script src="script/cookies.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219710149-1">
 </script>
@@ -30,11 +31,12 @@
 </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHNKJH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-<main id="page">
+    <div id="cookie-popup" class="c-cookie-popup">
+        <svg class="c-cookie-popup--logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        <p class="c-cookie-popup--text">Deze website maakt gebruik van cookies om u een betere browservaring te bieden. Door deze site te blijven gebruiken, stemt u in met het gebruik van cookies. <a href="cookiebeleid-en-privacydisclaimer.html#cookies">Meer lezen</a>.</p>
+        <button id="cookie-accept" class="c-cookie-popup--button">Ok</button>
+    </div>
+    <main id="page">
     <div class="c-page">
             <div class="c-page--main-content">
                 <header class="o-row">
@@ -104,17 +106,17 @@
                                     Hagen zijn een must in een tuin, ze sluiten het geheel af en geven een structuur en indeling aan uw tuin. Hierdoor krijgt u voldoende afsluiting in uw tuin maar krijgt u niet het harde opgesloten gevoel zoals tussen betonnen muren. Een haag vraagt natuurlijk wel wat onderhoud, wij helpen u graag een handje met de jaarlijkse scheerbeurten. Is de haag na enkele jaren buiten zijn voegen getreden dan kan u ook bij ons terecht voor het restaureren van deze. Ook voor de vormsnoei van hagen kan u bij ons terecht.
                                 </p>
                                 <div class="c-grid-images">
-                                    <img class="c-grid-image" src="img/haag/Haag1.jpg" onclick="openModal();currentSlideGallery(1)">
-                                    <img class="c-grid-image" src="img/haag/Haag2.jpg" onclick="openModal();currentSlideGallery(2)">
-                                    <img class="c-grid-image" src="img/haag/Haag3.jpeg" onclick="openModal();currentSlideGallery(3)">
-                                    <img class="c-grid-image" src="img/haag/Haag4.jpg" onclick="openModal();currentSlideGallery(4)">
-                                    <img class="c-grid-image" src="img/haag/Haag5.jpg" onclick="openModal();currentSlideGallery(5)">
-                                    <img class="c-grid-image" src="img/haag/Haag6.jpg" onclick="openModal();currentSlideGallery(6)">
-                                    <img class="c-grid-image" src="img/haag/Scheren1.jpeg" onclick="openModal();currentSlideGallery(7)">
-                                    <img class="c-grid-image" src="img/haag/Scheren2.jpeg" onclick="openModal();currentSlideGallery(8)">
-                                    <img class="c-grid-image" src="img/haag/Scheren3.jpeg" onclick="openModal();currentSlideGallery(9)">
-                                    <img class="c-grid-image" src="img/haag/Scheren4.jpeg" onclick="openModal();currentSlideGallery(10)">
-                                    <img class="c-grid-image" src="img/haag/Bodembedekker1.jpg" onclick="openModal();currentSlideGallery(11)">
+                                    <img class="c-grid-image" src="img/haag/Haag1.jpg" alt="Haag die niet zeer mooi recht geschoren is" onclick="openModal();currentSlideGallery(1)">
+                                    <img class="c-grid-image" src="img/haag/Haag2.jpg" alt="Haag die al voor de helft geschoren is" onclick="openModal();currentSlideGallery(2)">
+                                    <img class="c-grid-image" src="img/haag/Haag3.jpeg" alt="Tuinman die een haag aan het scheren is" onclick="openModal();currentSlideGallery(3)">
+                                    <img class="c-grid-image" src="img/haag/Haag4.jpg" alt="Haag die niet zeer mooi recht geschoren is" onclick="openModal();currentSlideGallery(4)">
+                                    <img class="c-grid-image" src="img/haag/Haag5.jpg" alt="Haag die niet zeer mooi recht geschoren is" onclick="openModal();currentSlideGallery(5)">
+                                    <img class="c-grid-image" src="img/haag/Haag6.jpg" alt="Haag die niet zeer mooi recht geschoren is" onclick="openModal();currentSlideGallery(6)">
+                                    <img class="c-grid-image" src="img/haag/Scheren1.jpeg" alt="Net geschoren klimop" onclick="openModal();currentSlideGallery(7)">
+                                    <img class="c-grid-image" src="img/haag/Scheren2.jpeg" alt="Tuinman die klimop aan het scheren is" onclick="openModal();currentSlideGallery(8)">
+                                    <img class="c-grid-image" src="img/haag/Scheren3.jpeg" alt="Geschoren in de vorm van een kegel" onclick="openModal();currentSlideGallery(9)">
+                                    <img class="c-grid-image" src="img/haag/Scheren4.jpeg" alt="Mooi rond geschorten boom" onclick="openModal();currentSlideGallery(10)">
+                                    <img class="c-grid-image" src="img/haag/Bodembedekker1.jpg" alt="Geschoren bodembedekker" onclick="openModal();currentSlideGallery(11)">
                                 </div>
                 </section>
             
@@ -124,57 +126,57 @@
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">1 / 11</div>
-                        <img src="img/haag/Haag1.jpg" class="c-slide--image">
+                        <img src="img/haag/Haag1.jpg" alt="Haag die niet zeer mooi recht geschoren is" class="c-slide--image">
                     </div>
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">2 / 11</div>
-                        <img src="img/haag/Haag2.jpg" class="c-slide--image">
+                        <img src="img/haag/Haag2.jpg" alt="Haag die al voor de helft geschoren is" class="c-slide--image">
                     </div>
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">3 / 11</div>
-                        <img src="img/haag/Haag3.jpeg" class="c-slide--image">
+                        <img src="img/haag/Haag3.jpeg" alt="Tuinman die een haag aan het scheren is" class="c-slide--image">
                     </div>
                 
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">4 / 11</div>
-                        <img src="img/haag/Haag4.jpg" class="c-slide--image">
+                        <img src="img/haag/Haag4.jpg" alt="Haag die niet zeer mooi recht geschoren is" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">5 / 11</div>
-                        <img src="img/haag/Haag5.jpg" class="c-slide--image">
+                        <img src="img/haag/Haag5.jpg" alt="Haag die niet zeer mooi recht geschoren is" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">6 / 11</div>
-                        <img src="img/haag/Haag6.jpg" class="c-slide--image">
+                        <img src="img/haag/Haag6.jpg" alt="Haag die niet zeer mooi recht geschoren is" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">7 / 11</div>
-                        <img src="img/haag/Scheren1.jpeg" class="c-slide--image">
+                        <img src="img/haag/Scheren1.jpeg" alt="Net geschoren klimop" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">8 / 11</div>
-                        <img src="img/haag/Scheren2.jpeg" class="c-slide--image">
+                        <img src="img/haag/Scheren2.jpeg" alt="Tuinman die klimop aan het scheren is" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">9 / 11</div>
-                        <img src="img/haag/Scheren3.jpeg" class="c-slide--image">
+                        <img src="img/haag/Scheren3.jpeg" alt="Geschoren in de vorm van een kegel" class="c-slide--image">
                     </div>
             
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">10 / 11</div>
-                        <img src="img/haag/Scheren4.jpeg" class="c-slide--image">
+                        <img src="img/haag/Scheren4.jpeg" alt="Mooi rond geschorten boom" class="c-slide--image">
                     </div>
     
                     <div class="c-slides-gallery">
                         <div class="c-slide--numbertext">11 / 11</div>
-                        <img src="img/haag/Bodembedekker1.jpg" class="c-slide--image">
+                        <img src="img/haag/Bodembedekker1.jpg" alt="Geschoren bodembedekker" class="c-slide--image">
                     </div>
                 
                     <a class="c-slides-gallery--prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
@@ -186,6 +188,10 @@
                 <footer class="o-row">
                     <div class="o-container">
                         <div>Contactgegevens: <a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                        <div class="u-color-darkgray u-pt-xs">
+                            © 2023 Tuinen Vanlerberghe -
+                            <a href="cookiebeleid-en-privacydisclaimer.html" class="c-secondary-link u-color-darkgray">Cookiebeleid & privacy disclaimer</a>
+                        </div>
                     </div>
                 </footer>
             

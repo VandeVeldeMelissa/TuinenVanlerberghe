@@ -1,20 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    /* ---- MOBILE NAV ---- */
-    //toggleNav();
     /* ---- SLIDESHOW ---- */
     currentSlide(1);
 })
 
 /* ------------------- MOBILE NAV  -------------------*/
 
-// function toggleNav() {
-//     let toggleTrigger = document.querySelectorAll(".js-toggle-nav");
-//     for (let i = 0; i < toggleTrigger.length; i++) {
-//         toggleTrigger[i].addEventListener("click", function() {
-//             document.querySelector("body").classList.toggle("has-mobile-nav");
-//         })
-//     }
-// }
 
 function openMobileNav() {
     console.log('open');
@@ -30,10 +20,6 @@ function closeMobileNav() {
     document.getElementById("page").style.overflow = "visible";
     scrollToTop();
 }
-
-// function toggleMobileNav() {
-//     document.querySelector("body").classList.toggle("has-mobile-nav");
-// }
 
 /* ------------------- SLIDESHOW  -------------------*/
 

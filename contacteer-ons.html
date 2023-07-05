@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
         <script src="script/app.js"></script>
+        <script src="script/contact.js"></script>
+        <script src="script/cookies.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219710149-1">
 </script>
@@ -29,12 +31,13 @@
   gtag('config', 'UA-219710149-1');
 </script>
     </head>
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHNKJH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-<main id="page">
+    <body class="js-contact">
+    <div id="cookie-popup" class="c-cookie-popup">
+        <svg class="c-cookie-popup--logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        <p class="c-cookie-popup--text">Deze website maakt gebruik van cookies om u een betere browservaring te bieden. Door deze site te blijven gebruiken, stemt u in met het gebruik van cookies. <a href="cookiebeleid-en-privacydisclaimer.html#cookies">Meer lezen</a>.</p>
+        <button id="cookie-accept" class="c-cookie-popup--button">Ok</button>
+    </div>
+    <main id="page">
             <div class="c-page">
                 <div class="c-page--main-content">
                     <header class="o-row">
@@ -111,29 +114,37 @@
                                 <div class="o-layout o-layout--gutter-lg o-layout--align-center o-layout--justify-space-evenly">
                                     <input type="hidden" name="_subject" value="Contactformulier website">
                                     <div class="o-layout__item u-1-of-2-bp2">
-                                        <label for="voornaam">Voornaam*: </label>
-                                        <input type="text" id="voornaam" name="voornaam" aria-required="true" placeholder="Voornaam" required>
+                                        <label for="voornaam">Voornaam: </label>
+                                        <input type="text" id="voornaam" name="voornaam" aria-required="true" placeholder="Voornaam" required class="js-first-name">
+                                        <p class="js-error-message-first-name c-error-message"></p>
                                     </div>
                                     <div class="o-layout__item u-1-of-2-bp2">
-                                        <label for="achternaam">Achternaam*: </label>
-                                        <input type="text" id="achternaam" name="achternaam" aria-required="true" placeholder="Achternaam" required>
+                                        <label for="achternaam">Achternaam: </label>
+                                        <input type="text" id="achternaam" name="achternaam" aria-required="true" placeholder="Achternaam" required class="js-last-name">
+                                        <p class="js-error-message-last-name c-error-message"></p>
                                     </div>
                                 </div>
                                 <div class="o-layout o-layout--gutter-lg o-layout--align-center o-layout--justify-space-evenly">
                                     <div class="o-layout__item u-1-of-2-bp2">
-                                        <label for="email">E-mailadres*: </label>
-                                        <input type="email" id="email" name="emailadres" aria-required="true" placeholder="Email" required>
+                                        <label for="email">E-mailadres: </label>
+                                        <input type="email" id="email" name="emailadres" aria-required="true" placeholder="Email" required class="js-email">
+                                        <p class="js-error-message-email c-error-message"></p>
                                     </div>
                                     <div class="o-layout__item u-1-of-2-bp2">
-                                        <label for="telnr">Telefoonnummer*: </label>
-                                        <input type="tel" id="telnr" name="telefoonnummer" aria-required="true" placeholder="Nummer" required>
+                                        <label for="telnr">Telefoonnummer: </label>
+                                        <input type="tel" id="telnr" name="telefoonnummer" aria-required="true" placeholder="Nummer" required class="js-telephone">
+                                        <p class="js-error-message-telephone c-error-message"></p>
                                     </div>
                                 </div>
             
-                                <label for="bericht">Bericht*: </label><br>
-                                <textarea name="bericht" id="bericht" cols="40" rows="10" aria-required="true" placeholder="Bericht" required></textarea><br>
-                                <span>* = Verplicht in te vullen velden</span><br>
-                                <input class="o-button-reset c-button--form" type="submit" value="Verstuur">
+                                <label for="bericht">Bericht: </label><br>
+                                <textarea name="bericht" id="bericht" cols="40" rows="10" aria-required="true" placeholder="Bericht" required class="js-message"></textarea><br>
+                                <p class="js-error-message-message c-error-message"></p>
+                                <i>Alle velden zijn verplicht in te vullen</i><br>
+                                <input type="checkbox" id="privacy" name="privacy" aria-required="true" class="js-privacy-disclaimer-checkbox" required>
+                                <label for="privacy">Ik ga akkoord met de <b><a href="cookiebeleid-en-privacydisclaimer.html#privacydisclaimer">privacy disclaimer</a></b></label><br>
+                                <p class="js-error-message-privacy-disclaimer-checkbox c-error-message u-pt-xs"></p>
+                                <button class="o-button-reset c-button--form js-submit-button u-disabled" type="submit">Verstuur</button>
                             </form>
                         </div>
                     </section>
@@ -141,9 +152,12 @@
                     <footer class="o-row">
                         <div class="o-container">
                             <div>Contactgegevens: <a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                            <div class="u-color-darkgray u-pt-xs">
+                                © 2023 Tuinen Vanlerberghe -
+                                <a href="cookiebeleid-en-privacydisclaimer.html" class="c-secondary-link u-color-darkgray">Cookiebeleid & privacy disclaimer</a>
+                            </div>
                         </div>
                     </footer>
-                
             </div>
 </main>
         <aside class="c-mobile-nav">

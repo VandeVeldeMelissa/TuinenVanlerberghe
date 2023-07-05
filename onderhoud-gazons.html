@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/screen.css">
     <script src="script/app.js"></script>
+    <script src="script/cookies.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219710149-1">
 </script>
@@ -30,10 +31,11 @@
 </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHNKJH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <div id="cookie-popup" class="c-cookie-popup">
+        <svg class="c-cookie-popup--logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        <p class="c-cookie-popup--text">Deze website maakt gebruik van cookies om u een betere browservaring te bieden. Door deze site te blijven gebruiken, stemt u in met het gebruik van cookies. <a href="cookiebeleid-en-privacydisclaimer.html#cookies">Meer lezen</a>.</p>
+        <button id="cookie-accept" class="c-cookie-popup--button">Ok</button>
+    </div>
 <main id="page">
     <div class="c-page">
         <div class="c-page--main-content">
@@ -107,19 +109,19 @@
                                     Maar ook hier zien we een evolutie, het klassieke gazonbeheer is tamelijk duur en bovendien wordt niet ieder gazon nog gebruikt waarvoor het vroeger aangelegd geweest is (als speelruimte voor de kinderen, voetbalveldje, extra terrasruimte,...) Eens bijvoorbeeld de kinderen uit huis zijn vervalt de functie, maar blijft het onderhoud wel en ook met de droger wordende zomers krijgt gras het steed moeilijker. Daardoor zien we vaker de vraag komen om het gazon om te vormen naar iets minder arbeidsintensief. In dat geval kan u bijvoorbeeld enkele delen van het gazon laten omvormen tot bloemrijk grasland, beplanten met vaste planten, <a href="https://www.ecopedia.be/artikel/gazonbeheer-op-maat-van-paddenstoelen-een-leidraad-voor-openbare-besturen-en-particulieren " target="_blank">paddenstoelengazon</a>,… ook hiervoor kan u bij ons terecht.
                                 </p>
                                 <div class="c-grid-images">
-                                    <img class="c-grid-image" src="img/gras/Gemaaid1.jpg" onclick="openModal();currentSlideGallery(1)">
-                                    <img class="c-grid-image" src="img/gras/Zaaien1.jpg" onclick="openModal();currentSlideGallery(2)">
-                                    <img class="c-grid-image" src="img/gras/Zaaien2.jpg" onclick="openModal();currentSlideGallery(3)">
-                                    <img class="c-grid-image" src="img/gras/Grasmatten1.jpg" onclick="openModal();currentSlideGallery(4)">
-                                    <img class="c-grid-image" src="img/gras/Grasmatten2.jpg" onclick="openModal();currentSlideGallery(5)">
-                                    <img class="c-grid-image" src="img/gras/Grasmatten3.jpg" onclick="openModal();currentSlideGallery(6)">
-                                    <img class="c-grid-image" src="img/gras/Grasmatten4.jpg" onclick="openModal();currentSlideGallery(7)">
-                                    <img class="c-grid-image" src="img/gras/Grasmatten5.jpg" onclick="openModal();currentSlideGallery(8)">
-                                    <img class="c-grid-image" src="img/gras/Bloemenweide1.jpg" onclick="openModal();currentSlideGallery(9)">
-                                    <img class="c-grid-image" src="img/gras/Bloemenweide2.jpg" onclick="openModal();currentSlideGallery(10)">
-                                    <img class="c-grid-image" src="img/gras/Bloemenweide3.jpeg" onclick="openModal();currentSlideGallery(11)">
-                                    <img class="c-grid-image" src="img/gras/Bloemenweide4.jpg" onclick="openModal();currentSlideGallery(12)">
-                                    <img class="c-grid-image" src="img/gras/Bloemenweide5.jpg" onclick="openModal();currentSlideGallery(13)">
+                                    <img class="c-grid-image" src="img/gras/Gemaaid1.jpg" alt="Kort gemaaid mooi groen gras met een recht afgeschoren haag" onclick="openModal();currentSlideGallery(1)">
+                                    <img class="c-grid-image" src="img/gras/Zaaien1.jpg" alt="Net gezaaid gras" onclick="openModal();currentSlideGallery(2)">
+                                    <img class="c-grid-image" src="img/gras/Zaaien2.jpg" alt="Resultaat van het gezaaid gras: mooi groen gras zonder gaten" onclick="openModal();currentSlideGallery(3)">
+                                    <img class="c-grid-image" src="img/gras/Grasmatten1.jpg" alt="Gazon net voor er nieuwe gramatten gelegd worden: mooi platte aarde" onclick="openModal();currentSlideGallery(4)">
+                                    <img class="c-grid-image" src="img/gras/Grasmatten2.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" onclick="openModal();currentSlideGallery(5)">
+                                    <img class="c-grid-image" src="img/gras/Grasmatten3.jpg" alt="Gazon in een hoek net voor er nieuwe gramatten gelegd worden: mooi platte aarde"  onclick="openModal();currentSlideGallery(6)">
+                                    <img class="c-grid-image" src="img/gras/Grasmatten4.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" onclick="openModal();currentSlideGallery(7)">
+                                    <img class="c-grid-image" src="img/gras/Grasmatten5.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" onclick="openModal();currentSlideGallery(8)">
+                                    <img class="c-grid-image" src="img/gras/Bloemenweide1.jpg" alt="Net gezaaide bloemenweide" onclick="openModal();currentSlideGallery(9)">
+                                    <img class="c-grid-image" src="img/gras/Bloemenweide2.jpg" alt="Het begin van een bloemenweide" onclick="openModal();currentSlideGallery(10)">
+                                    <img class="c-grid-image" src="img/gras/Bloemenweide3.jpeg" alt="Resultaat van de gezaaide bloemenweide: bloemenweide met wilde bloemen die allemaal volop in bloei staan" onclick="openModal();currentSlideGallery(11)">
+                                    <img class="c-grid-image" src="img/gras/Bloemenweide4.jpg" alt="Close-up van een bloemenweide met rode, paarse, witte en gele bloemen" onclick="openModal();currentSlideGallery(12)">
+                                    <img class="c-grid-image" src="img/gras/Bloemenweide5.jpg" alt="Close-up van een bloemenweide met rode, paarse, witte en gele bloemen" onclick="openModal();currentSlideGallery(13)">
                                 </div>
                             </div>
                         </section>
@@ -130,67 +132,67 @@
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">1 / 13</div>
-                                <img src="img/gras/Gemaaid1.jpg" class="c-slide--image">
+                                <img src="img/gras/Gemaaid1.jpg" alt="Kort gemaaid mooi groen gras met een recht afgeschoren haag" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">2 / 13</div>
-                                <img src="img/gras/Zaaien1.jpg" class="c-slide--image">
+                                <img src="img/gras/Zaaien1.jpg" alt="Net gezaaid gras" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">3 / 13</div>
-                                <img src="img/gras/Zaaien2.jpg" class="c-slide--image">
+                                <img src="img/gras/Zaaien2.jpg" alt="Resultaat van het gezaaid gras: mooi groen gras zonder gaten" class="c-slide--image">
                             </div>
                         
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">4 / 13</div>
-                                <img src="img/gras/Grasmatten1.jpg" class="c-slide--image">
+                                <img src="img/gras/Grasmatten1.jpg" alt="Gazon net voor er nieuwe gramatten gelegd worden: mooi platte aarde"  class="c-slide--image">
                             </div>
                         
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">5 / 13</div>
-                                <img src="img/gras/Grasmatten2.jpg" class="c-slide--image">
+                                <img src="img/gras/Grasmatten2.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" class="c-slide--image">
                             </div>
                         
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">6 / 13</div>
-                                <img src="img/gras/Grasmatten3.jpg" class="c-slide--image">
+                                <img src="img/gras/Grasmatten3.jpg" alt="Gazon in een hoek net voor er nieuwe gramatten gelegd worden: mooi platte aarde" class="c-slide--image">
                             </div>
                         
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">7 / 13</div>
-                                <img src="img/gras/Grasmatten4.jpg" class="c-slide--image">
+                                <img src="img/gras/Grasmatten4.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">8 / 13</div>
-                                <img src="img/gras/Grasmatten5.jpg" class="c-slide--image">
+                                <img src="img/gras/Grasmatten5.jpg" alt="Gazon na het leggen van grasmatten: mooi groen en mooi plat" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">9 / 13</div>
-                                <img src="img/gras/Bloemenweide1.jpg" class="c-slide--image">
+                                <img src="img/gras/Bloemenweide1.jpg" alt="Net gezaaide bloemenweide" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">10 / 13</div>
-                                <img src="img/gras/Bloemenweide2.jpg" class="c-slide--image">
+                                <img src="img/gras/Bloemenweide2.jpg" alt="Het begin van een bloemenweide" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">11 / 13</div>
-                                <img src="img/gras/Bloemenweide3.jpeg" class="c-slide--image">
+                                <img src="img/gras/Bloemenweide3.jpeg" alt="Resultaat van de gezaaide bloemenweide: bloemenweide met wilde bloemen die allemaal volop in bloei staan" class="c-slide--image">
                             </div>
             
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">12 / 13</div>
-                                <img src="img/gras/Bloemenweide4.jpg" class="c-slide--image">
+                                <img src="img/gras/Bloemenweide4.jpg" alt="Close-up van een bloemenweide met rode, paarse, witte en gele bloemen" class="c-slide--image">
                             </div>
     
                             <div class="c-slides-gallery">
                                 <div class="c-slide--numbertext">13 / 13</div>
-                                <img src="img/gras/Bloemenweide5.jpg" class="c-slide--image">
+                                <img src="img/gras/Bloemenweide5.jpg" alt="Close-up van een bloemenweide met rode, paarse, witte en gele bloemen" class="c-slide--image">
                             </div>
                         
                             <a class="c-slides-gallery--prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
@@ -202,6 +204,10 @@
                 <footer class="o-row">
                     <div class="o-container">
                         <div>Contactgegevens: <a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                        <div class="u-color-darkgray u-pt-xs">
+                            © 2023 Tuinen Vanlerberghe -
+                            <a href="cookiebeleid-en-privacydisclaimer.html" class="c-secondary-link u-color-darkgray">Cookiebeleid & privacy disclaimer</a>
+                        </div>
                     </div>
                 </footer>
         

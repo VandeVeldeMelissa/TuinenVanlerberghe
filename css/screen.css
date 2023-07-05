@@ -73,7 +73,8 @@ body {
   flex-direction: column;
 }
 
-html, body {
+html,
+body {
   overscroll-behavior-y: none;
 }
 
@@ -211,9 +212,12 @@ a {
 
 a:visited,
 a:active,
-a:hover,
 a:focus {
   color: black;
+}
+
+a:hover {
+  color: #006e2e;
 }
 
 input[type='text'],
@@ -530,6 +534,85 @@ main {
   #COMPONENTS
 \*------------------------------------*/
 
+/*
+    Component: Cookie popup
+    ---
+    Cookie popup component
+*/
+
+.c-cookie-popup--logo {
+  color: #006e2e;
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.c-cookie-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: fixed; 
+  bottom: 0px; 
+  width: 100vw;
+  padding: 6px; 
+  background: #ffffff; 
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 5px 5px 0 0;
+}
+
+.c-cookie-popup--text {
+  font-size: 12px;
+  margin: 0;
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+}
+
+.c-cookie-popup--button {
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: white;
+  border: 2px solid #006e2e;
+  background-color: #006e2e;
+  border-radius: 2px;
+  line-height: 24px;
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+}
+
+.c-cookie-popup--button:hover {
+  border: 2px solid #005021;
+  background-color: #005021;
+}
+
+@media (min-width: 300px) {
+  
+}
+
+@media (min-width: 768px) {
+  .c-cookie-popup--logo {
+    color: #006e2e;
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .c-cookie-popup--text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+/* --- */
+
 .c-page--main-content {
   min-height: calc(100vh - 88px);
 }
@@ -548,10 +631,9 @@ main {
 }
 
 .c-logo__link {
-  text-decoration:none;
+  text-decoration: none;
   height: max-content;
 }
-
 
 /*
     Component: header
@@ -574,8 +656,6 @@ main {
   width: 24px;
   height: 24px;
 }
-
-
 
 @media (min-width: 300px) {
   .c-header__mobile-nav-trigger {
@@ -791,7 +871,11 @@ main {
   }
 }
 
-/*********/
+/*
+    Component: Button
+    ---
+    Button Component
+*/
 
 .c-button--thankyou {
   padding: 8px 16px;
@@ -817,11 +901,7 @@ main {
   background-color: #005021;
 }
 
-/*
-    Component: Button
-    ---
-    Button Component
-*/
+/*********/
 
 .c-button--form {
   padding: 8px 16px;
@@ -854,7 +934,34 @@ main {
   outline-color: #85bd3a;
 }
 
-/* ------------------------- SLIDESHOW -------------------------------- */
+/*
+    Component: Input
+    ---
+    Input Component
+*/
+
+.c-input--error {
+  border: 1px solid #ff0000 !important;
+}
+
+/*
+    Component: Error message
+    ---
+    Error message Component
+*/
+
+.c-error-message {
+  font-weight: 500;
+  color: #ff0000;
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+
+/*
+    Component: Slideshow
+    ---
+    Slideshow Component
+*/
 
 .c-slideshow-image {
   width: 100%;
@@ -1040,7 +1147,7 @@ main {
 .c-modal {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 1500;
   /* padding-top: 100px; */
   padding: 10vh 0;
   left: 0;
@@ -1134,9 +1241,43 @@ main {
   border: solid 8px white;
 }
 
+/*
+    Component: Secondary link
+    ---
+    Small link component to be used in the footer
+*/
+
+.c-secondary-link {
+  text-decoration: none;
+  color: #4d4d4d !important;
+}
+
+.c-secondary-link:hover {
+  color: #006e2e !important;
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
+
+/*
+    Utilities: Decoration
+    ---
+    Utility classes to put specific decorations onto elements
+*/
+
+.u-color-darkgray {
+  color: #4d4d4d !important;
+}
+
+.u-no-decoration {
+  text-decoration: none !important;
+}
+
+.u-disabled {
+  background-color: #4d4d4d;
+  border-color: #4d4d4d;
+}
 
 /*
     Utilities: spacing
@@ -1146,6 +1287,10 @@ main {
 
 .u-pt-clear {
   padding-top: 0 !important;
+}
+
+.u-pt-xs {
+  padding-top: 4px !important;
 }
 
 .u-pt-md {

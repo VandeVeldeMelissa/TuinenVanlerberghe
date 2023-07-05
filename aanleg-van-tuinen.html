@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
         <script src="script/app.js"></script>
+        <script src="script/cookies.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219710149-1">
 </script>
@@ -30,10 +31,11 @@
 </script>
     </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHNKJH6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        <div id="cookie-popup" class="c-cookie-popup">
+            <svg class="c-cookie-popup--logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+            <p class="c-cookie-popup--text">Deze website maakt gebruik van cookies om u een betere browservaring te bieden. Door deze site te blijven gebruiken, stemt u in met het gebruik van cookies. <a href="cookiebeleid-en-privacydisclaimer.html#cookies">Meer lezen</a>.</p>
+            <button id="cookie-accept" class="c-cookie-popup--button">Ok</button>
+        </div>
         <main id="page">
             <div class="c-page">
                 <div class="c-page--main-content">
@@ -113,7 +115,7 @@
                                 <img class="c-grid-image" src="img/terras_oprit/Terras1.jpg" onclick="openModal();currentSlideGallery(3)">
                                 <img class="c-grid-image" src="img/terras_oprit/Terras3.jpg" onclick="openModal();currentSlideGallery(4)">
                                 <img class="c-grid-image" src="img/afsluiting/Afsluiting3.jpeg" onclick="openModal();currentSlideGallery(5)">
-                                <img class="c-grid-image" src="img/verw_bepl/Verwijdering1.jpg" onclick="openModal();currentSlideGallery(5)">
+                                <img class="c-grid-image" src="img/verw_bepl/Verwijdering1.jpg" onclick="openModal();currentSlideGallery(6)">
                                 <img class="c-grid-image" src="img/verw_bepl/Verwijdering2.jpg" onclick="openModal();currentSlideGallery(7)">
                                 <img class="c-grid-image" src="img/verw_bepl/Verwijdering4.jpg" onclick="openModal();currentSlideGallery(8)">
                                 <img class="c-grid-image" src="img/verw_bepl/Verwijdering5.jpg" onclick="openModal();currentSlideGallery(9)">
@@ -129,12 +131,12 @@
         
                         <div class="c-slides-gallery">
                             <div class="c-slide--numbertext">1 / 10</div>
-                            <img src="img/aanplanten/Aanplanten1.jpg" class="c-slide--image">
+                            <img src="img/aanplanten/Aanplanten3.jpg" class="c-slide--image">
                         </div>
         
                         <div class="c-slides-gallery">
                             <div class="c-slide--numbertext">2 / 10</div>
-                            <img src="img/aanplanten/Aanplanten2.jpg" class="c-slide--image">
+                            <img src="img/aanplanten/Aanplanten4.jpg" class="c-slide--image">
                         </div>
         
                         <div class="c-slides-gallery">
@@ -144,7 +146,7 @@
                     
                         <div class="c-slides-gallery">
                             <div class="c-slide--numbertext">4 / 10</div>
-                            <img src="img/terras_oprit/Terras2.jpg" class="c-slide--image">
+                            <img src="img/terras_oprit/Terras3.jpg" class="c-slide--image">
                         </div>
                     
                         <div class="c-slides-gallery">
@@ -164,12 +166,12 @@
         
                         <div class="c-slides-gallery">
                             <div class="c-slide--numbertext">8 / 10</div>
-                            <img src="img/verw_bepl/Verwijdering3.jpg" class="c-slide--image">
+                            <img src="img/verw_bepl/Verwijdering4.jpg" class="c-slide--image">
                         </div>
         
                         <div class="c-slides-gallery">
                             <div class="c-slide--numbertext">9 / 10</div>
-                            <img src="img/verw_bepl/Verwijdering4.jpg" class="c-slide--image">
+                            <img src="img/verw_bepl/Verwijdering5.jpg" class="c-slide--image">
                         </div>
         
                         <div class="c-slides-gallery">
@@ -196,6 +198,10 @@
                     <footer class="o-row">
                         <div class="o-container">
                             <div>Contactgegevens: <a href="mailto:info@tuinen-vanlerberghe.be">info@tuinen-vanlerberghe.be</a> - Tel nr. <a href="tel:+32483503038">0483 50 30 38</a> - BTW BE 0745 360 668</div>
+                            <div class="u-color-darkgray u-pt-xs">
+                                © 2023 Tuinen Vanlerberghe -
+                                <a href="cookiebeleid-en-privacydisclaimer.html" class="c-secondary-link u-color-darkgray">Cookiebeleid & privacy disclaimer</a>
+                            </div>
                         </div>
                     </footer>
                 
