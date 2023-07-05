@@ -1,149 +1,172 @@
 document.addEventListener('DOMContentLoaded', function () {
-    if (document.querySelector('.js-contact')) {
-      const formFields = {
-        firstName: {
-          input: document.querySelector('.js-first-name'),
-          errorMessage: document.querySelector('.js-error-message-first-name'),
-          validate() {
-            if (this.input.value === '') {
-              this.input.classList.add('c-input--error');
-              this.errorMessage.innerHTML = 'Gelieve uw voornaam in te vullen';
-              return false;
-            } else {
-              this.input.classList.remove('c-input--error');
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-          removeError() {
-            this.input.classList.remove('c-input--error');
-            this.errorMessage.innerHTML = '';
-          },
-        },
-        lastName: {
-          input: document.querySelector('.js-last-name'),
-          errorMessage: document.querySelector('.js-error-message-last-name'),
-          validate() {
-            if (this.input.value === '') {
-              this.input.classList.add('c-input--error');
-              this.errorMessage.innerHTML =
-                'Gelieve uw achternaam in te vullen';
-              return false;
-            } else {
-              this.input.classList.remove('c-input--error');
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-          removeError() {
-            this.input.classList.remove('c-input--error');
-            this.errorMessage.innerHTML = '';
-          },
-        },
-        telephone: {
-          input: document.querySelector('.js-telephone'),
-          errorMessage: document.querySelector('.js-error-message-telephone'),
-          validate() {
-            if (this.input.value === '') {
-              this.input.classList.add('c-input--error');
-              this.errorMessage.innerHTML =
-                'Gelieve uw telefoonnummer in te vullen';
-              return false;
-            } else {
-              this.input.classList.remove('c-input--error');
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-          removeError() {
-            this.input.classList.remove('c-input--error');
-            this.errorMessage.innerHTML = '';
-          },
-        },
-        email: {
-          input: document.querySelector('.js-email'),
-          errorMessage: document.querySelector('.js-error-message-email'),
-          validate() {
-            if (this.input.value === '') {
-              this.input.classList.add('c-input--error');
-              this.errorMessage.innerHTML =
-                'Gelieve uw e-mailadres in te vullen';
-              return false;
-            } else {
-              this.input.classList.remove('c-input--error');
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-          removeError() {
-            this.input.classList.remove('c-input--error');
-            this.errorMessage.innerHTML = '';
-          },
-        },
-        message: {
-          input: document.querySelector('.js-message'),
-          errorMessage: document.querySelector('.js-error-message-message'),
-          validate() {
-            if (this.input.value === '') {
-              this.input.classList.add('c-input--error');
-              this.errorMessage.innerHTML = 'Gelieve uw bericht in te vullen';
-              return false;
-            } else {
-              this.input.classList.remove('c-input--error');
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-          removeError() {
-            this.input.classList.remove('c-input--error');
-            this.errorMessage.innerHTML = '';
-          },
-        },
-        privacyDisclaimerCheckbox: {
-          input: document.querySelector('.js-privacy-disclaimer-checkbox'),
-          errorMessage: document.querySelector(
-            '.js-error-message-privacy-disclaimer-checkbox'
-          ),
-          validate() {
-            if (!this.input.checked) {
-              this.errorMessage.innerHTML =
-                'Gelieve akkoord te gaan met de privacy disclaimer';
-              return false;
-            } else {
-              this.errorMessage.innerHTML = '';
-              return true;
-            }
-          },
-        },
-      };
+  let validFirstName = false;
+  let validLastName = false;
+  let validTelephone = false;
+  let validEmail = false;
+  let validMessage = false;
+  let validPrivacyDisclaimer = false;
 
-      const submitButton = document.querySelector('.js-submit-button');
+  const firstName = document.querySelector('.js-first-name');
+  const lastName = document.querySelector('.js-last-name');
+  const telephone = document.querySelector('.js-telephone');
+  const email = document.querySelector('.js-email');
+  const message = document.querySelector('.js-message');
+  const privacyDisclaimerCheckbox = document.querySelector(
+    '.js-privacy-disclaimer-checkbox'
+  );
+  const submitButton = document.querySelector('.js-submit-button');
 
-      const validateForm = () => {
-        const fields = Object.values(formFields);
-        const validFields = fields.map((field) => field.validate());
-        const isFormValid = validFields.every((valid) => valid);
-
-        submitButton.classList.toggle('u-disabled', !isFormValid);
-        submitButton.disabled = !isFormValid;
-
-        return isFormValid;
-      };
-
-      const removeError = (field) => {
-        field.removeError();
-        validateForm();
-      };
-
-      Object.values(formFields).forEach((field) => {
-        field.input.addEventListener('blur', field.validate.bind(field));
-        field.input.addEventListener('input', removeError.bind(null, field));
-      });
-
-      submitButton.addEventListener('click', validateForm);
-      formFields.privacyDisclaimerCheckbox.input.addEventListener(
-        'click',
-        validateForm
-      );
+  const checkFirstName = () => {
+    console.log('checkFirstName');
+    if (firstName.value === '') {
+      firstName.classList.add('c-input--error');
+      document.querySelector('.js-error-message-first-name').innerHTML =
+        'Gelieve uw voornaam in te vullen';
+      submitButton.classList.add('u-disabled');
+      validFirstName = false;
+    } else {
+      firstName.classList.remove('c-input--error');
+      document.querySelector('.js-error-message-first-name').innerHTML = '';
+      validFirstName = true;
     }
-  });
+  };
+
+  const removeErrorFirstName = () => {
+    firstName.classList.remove('c-input--error');
+    document.querySelector('.js-error-message-first-name').innerHTML = '';
+  };
+
+  const checkLastName = () => {
+    console.log('checkLastName');
+    if (lastName.value === '') {
+      lastName.classList.add('c-input--error');
+      document.querySelector('.js-error-message-last-name').innerHTML =
+        'Gelieve uw achternaam in te vullen';
+      submitButton.classList.add('u-disabled');
+      validLastName = false;
+    } else {
+      lastName.classList.remove('c-input--error');
+      document.querySelector('.js-error-message-last-name').innerHTML = '';
+      validLastName = true;
+    }
+  };
+
+  const removeErrorLastName = () => {
+    lastName.classList.remove('c-input--error');
+    document.querySelector('.js-error-message-last-name').innerHTML = '';
+  };
+
+  const checkTelephone = () => {
+    console.log('checkTelephone');
+    if (telephone.value === '') {
+      telephone.classList.add('c-input--error');
+      document.querySelector('.js-error-message-telephone').innerHTML =
+        'Gelieve uw telefoonnummer in te vullen';
+      submitButton.classList.add('u-disabled');
+      validTelephone = false;
+    } else {
+      telephone.classList.remove('c-input--error');
+      document.querySelector('.js-error-message-telephone').innerHTML = '';
+      validTelephone = true;
+    }
+  };
+
+  const removeErrorTelephone = () => {
+    telephone.classList.remove('c-input--error');
+    document.querySelector('.js-error-message-telephone').innerHTML = '';
+  };
+
+  const checkEmail = () => {
+    console.log('checkEmail');
+    if (email.value === '') {
+      email.classList.add('c-input--error');
+      document.querySelector('.js-error-message-email').innerHTML =
+        'Gelieve uw e-mailadres in te vullen';
+      submitButton.classList.add('u-disabled');
+      validEmail = false;
+    } else {
+      email.classList.remove('c-input--error');
+      document.querySelector('.js-error-message-email').innerHTML = '';
+      validEmail = true;
+    }
+  };
+
+  const removeErrorEmail = () => {
+    email.classList.remove('c-input--error');
+    document.querySelector('.js-error-message-email').innerHTML = '';
+  };
+
+  const checkMessage = () => {
+    console.log('checkMessage');
+    if (message.value === '') {
+      message.classList.add('c-input--error');
+      document.querySelector('.js-error-message-message').innerHTML =
+        'Gelieve uw bericht in te vullen';
+      submitButton.classList.add('u-disabled');
+      validMessage = false;
+    } else {
+      message.classList.remove('c-input--error');
+      document.querySelector('.js-error-message-message').innerHTML = '';
+      validMessage = true;
+    }
+  };
+
+  const removeErrorMessage = () => {
+    message.classList.remove('c-input--error');
+    document.querySelector('.js-error-message-message').innerHTML = '';
+  };
+
+  const checkForm = () => {
+    console.log('checkForm');
+
+    checkFirstName();
+    checkLastName();
+    checkTelephone();
+    checkEmail();
+    checkMessage();
+
+    //Check if privacy disclaimer is checked
+    if (privacyDisclaimerCheckbox.checked === false) {
+      document.querySelector(
+        '.js-error-message-privacy-disclaimer-checkbox'
+      ).innerHTML = 'Gelieve akkoord te gaan met de privacy disclaimer';
+      validPrivacyDisclaimer = false;
+    } else {
+      document.querySelector(
+        '.js-error-message-privacy-disclaimer-checkbox'
+      ).innerHTML = '';
+      validPrivacyDisclaimer = true;
+    }
+
+    if (
+      validFirstName === false ||
+      validLastName === false ||
+      validTelephone === false ||
+      validEmail === false ||
+      validMessage === false ||
+      validPrivacyDisclaimer === false
+    ) {
+      submitButton.classList.add('u-disabled');
+      console.log('form not valid');
+      return false;
+    } else {
+      submitButton.classList.remove('u-disabled');
+      submitButton.removeAttribute('disabled');
+      console.log('form valid');
+      return true;
+    }
+  };
+
+  firstName.addEventListener('blur', checkFirstName);
+  firstName.addEventListener('input', removeErrorFirstName);
+  lastName.addEventListener('blur', checkLastName);
+  lastName.addEventListener('input', removeErrorLastName);
+  telephone.addEventListener('blur', checkTelephone);
+  telephone.addEventListener('input', removeErrorTelephone);
+  email.addEventListener('blur', checkEmail);
+  email.addEventListener('input', removeErrorEmail);
+  message.addEventListener('blur', checkMessage);
+  message.addEventListener('input', removeErrorMessage);
+  submitButton.addEventListener('click', checkForm);
+  privacyDisclaimerCheckbox.addEventListener('click', checkForm);
+});
